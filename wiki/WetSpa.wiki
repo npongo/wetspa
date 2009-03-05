@@ -21,7 +21,7 @@ hydrological and geophysical characteristics of the catchment and therefore is s
 studying the impact of land use change on the hydrological behaviours of a river basin.
 
 
-= Details =
+== Details ==
 
 The WetSpa Extension, described in this report, is a GIS-based distributed hydrological
 model for flood prediction and water balance simulation on catchment scale, which is
@@ -50,7 +50,7 @@ based on the literature review and practical case studies.
 9) Model programs using ArcView Avenue and Fortran language are developed, which
 makes use of spatial inputs and gives spatial outputs as well.
 
-= Model structure =
+== Model structure ==
 The model uses multiple layers to represent the water and energy balance for each grid cell,
 taking into account the processes of precipitation, interception, snowmelt, depression,
 infiltration, evapotranspiration, percolation, surface runoff, interflow and groundwater
