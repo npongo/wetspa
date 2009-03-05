@@ -1,13 +1,94 @@
-#WetSpa Distributed Hydrologic Model
+WetSpa Extension, A GIS-based Hydrologic Model for Flood Prediction and Watershed Management
 
 = Introduction =
 
-Add your content here.
+A GIS-based distributed watershed model, WetSpa Extension, has been under
+development suitable for use of flood prediction and watershed management on catchment
+scale. The model is physically based and simulates hydrological processes of precipitation,
+snowmelt, interception, depression, surface runoff, infiltration, evapotranspiration,
+percolation, interflow, groundwater flow, etc. continuously both in time and space, for
+which the water and energy balance are maintained on each raster cell. Surface runoff is
+produced using a modified coefficient method based on the cell characteristics of slope,
+land use, and soil type, and allowed to vary with soil moisture, rainfall intensity and storm
+duration. Interflow is computed based on the Darcy’s law and the kinematic approximation
+as a function of the effective hydraulic conductivity and the hydraulic gradient, while
+groundwater flow is estimated with a linear reservoir method on a small subcatchment
+scale as a function of groundwater storage and a recession coefficient. Special emphasis is
+given to the overland flow and channel flow routing using the method of linear diffusive
+wave approximation, which is capable to predict flow discharge at any converging point
+downstream by a unit response function. The model accounts for spatially distributed
+hydrological and geophysical characteristics of the catchment and therefore is suitable for
+studying the impact of land use change on the hydrological behaviours of a river basin.
 
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+The WetSpa Extension, described in this report, is a GIS-based distributed hydrological
+model for flood prediction and water balance simulation on catchment scale, which is
+capable of predicting outflow hydrograph at basin outlet or any converging point in a
+watershed with a variable time steps (De Smedt et al., 2000; Liu et al., 1999, 2002, 2003).
+The model aims not only at predicting flood, but also investigating the reasons behind it,
+especially the spatial distribution of topography, land use and soil type. Comparing with
+the original WetSpa model, the major changes involved in this extension are:
+1) The time resolution of all hydrological processes is changed to a variable time scale
+(minutely, hourly, daily, etc.) in order to meet the specific requirement of flood
+prediction.
+2) The flow routing component for both overland flow and channel flow are incorporated
+using the method of linear diffusive wave approximation.
+3) The component of shallow subsurface lateral flow is added to the original model
+simulating interflow by the method of kinematic approximation.
+4) The component of snowmelt modelling is added to the original model simulating
+snowmelt by the degree-day approach.
+5) The hydrological process of depression storage is taken into account being one of the
+major losses of initial abstraction.
+6) Groundwater flow simulation is performed on small subcatchment scale by the method
+of linear reservoir for the simplification of model parameterization.
+7) Some model formulas are modified in order to make the model more physically based
+and capable of using readily available data.
+8) All default parameter values involved in the model lookup tables are recalibrated
+based on the literature review and practical case studies.
+9) Model programs using ArcView Avenue and Fortran language are developed, which
+makes use of spatial inputs and gives spatial outputs as well.
+
+= Model structure =
+The model uses multiple layers to represent the water and energy balance for each grid cell,
+taking into account the processes of precipitation, interception, snowmelt, depression,
+infiltration, evapotranspiration, percolation, surface runoff, interflow and groundwater
+flow. The simulated hydrological system consists of four control volumes: the plant
+canopy, the soil surface, the root zone, and the saturated groundwater aquifer. The
+precipitation that falls from the atmosphere before it reaches the ground surface is
+abstracted by canopy interception storage. The remaining rainfall reached to the ground is
+separated into two parts depending on the land cover, soil type, slope, the magnitude of
+rainfall, and the antecedent moisture content of the soil. The first component fills the
+depression storage at the initial stage and runs off the land surface simultaneously, while
+the remaining part infiltrates into the soil. The infiltrated part of the rainfall may stay as
+soil moisture in the root zone, move laterally as interflow or percolate further as
+groundwater recharge depending on the moisture content of the soil. Drainage water from a
+given cell flows laterally depending on the amount of groundwater storage and the
+recession coefficient. The percolation out of the soil layer is assumed to recharge the
+groundwater storage. Interflow from the root zone is assumed to contribute overland flow
+and routed to the watershed outlet together with surface runoff. The total runoff from each
+pixel cell constitutes the sum of the surface runoff, the interflow and the groundwater flow.
+Evaporation takes place from intercepted water, depressed water and the soil surface, while
+transpiration takes place from the plant through root system in the soil layer, and a small
+part from the groundwater storage. The water balance for the interception storage includes
+precipitation, evaporation and through fall. The water balance for the depression storage
+includes through fall, infiltration, evaporation and surface runoff. The water balance for the soil column includes infiltration, evapotranspiration, percolation, and lateral subsurface runoff. The water balance for the groundwater storage includes groundwater recharge,
+deep evapotranspiration, and lateral groundwater flow. Excess runoff, infiltration,
+evapotranspiration, interflow and percolation estimates are point calculations. Different
+slope, land use and soil properties in different grid cells of a watershed result in different
+amounts of excess runoff when subjected to the same amount of rainfall. The routing of
+runoff from different cells to the watershed outlet depends on flow velocity and wave
+damping coefficient using the method of diffusive wave approximation. Although the
+spatial variability of land use, soil and topographic properties in a watershed are considered
+in this model, the groundwater response is modelled on small subcatchment scale for the
+convenience of model parameterization and model simulation. Two alternatives for
+determining groundwater flow are used in the model, simulating groundwater flow with a
+simple linear reservoir method and non-linear reservoir method. All model equations are
+specifically chosen to maintain a physical basis and well supported by previous studies.
+The inputs to the model are precipitation and potential evapotranspiration (PET).
+Temperature data are needed if snow accumulation and snowmelt occur during the
+simulation period. The digital maps of topography, land use and soil type are used to derive
+all necessary spatial distributed model parameters. The main outputs of the model are river
+flow hydrographs and spatially distributed hydrological characteristics, such as soil
+moisture, infiltration rates, groundwater recharge, surface water retention or runoff, etc.
