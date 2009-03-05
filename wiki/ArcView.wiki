@@ -7,31 +7,4 @@ Several versions of ArcView 3.x have been released to date.  This tutorial is ve
 "ArcView 3.1 introduced a wizard-based approach to accomplish a variety of more sophisticated tasks such as advanced map production and advanced geoprocessing. Task wizards, along with other updates focusing on enhancing usability, leverage the power of ArcView to help you more quickly and easily accomplish your geographic information system (GIS) objectives. ArcView 3.1 also introduced several new included extensions, specifically designed to supplement your GIS requirements. In particular, ArcView features a report writer extension that enables you to easily generate professional reports, including embedded maps and charts, that help you more successfully communicate the results of your GIS analysis.
 ArcView 3.2 provided both strategic updates to existing capabilities as well as new tools to facilitate your GIS operations. Specifically, ArcView 3.2 included an updated report writer and significant database access improvements. ArcView 3.2 also introduced a new shapefile projection utility, providing support for an extensive range of data projections and datum transformations, as well as support for several new data formats.
 ArcView 3.3 provides key updates to many of the tools that are part of ArcView.  ArcView 3.3 includes updates to many extensions including CAD Reader, ERDAS IMAGINE® Image Reader, and the National Imagery Transmission Format (NITF) Data Reader. Also, the Projection Utility has been enhanced for greater performance. The Report Writer has been updated to include Crystal Reports™ 8.5 by Crystal Decisions. Database Access 2.1c is also included to support the latest ArcSDE™ database and provide direct connections to ArcSDE data. ESRI Data & Maps has also expanded to eight CDs full of new and updated data."
-Several extensions are available for use with ArcView.  Many of these are commercial extensions developed by ESRI and others.  Some of the commercial extensions developed by ESRI include the following:
-
-Network Analyst: Performs network or routing analysis.
-Spatial Analyst: Performs grid cell (raster) analysis.
-Internet Map Server: A map publishing tool for the World Wide Web.
-StreetMap: A tool for U.S. Street address geocoding and map display.
-ArcPress: Develops maps on raster plotting devices.
-3D Analyst: Creates, analyzes, and displays surface data.
-Business Analyst: Supports business analysis.
-Image Analysis: Supports image analysis capabilities.
-Tracking Analyst: Directs feed and playback of real-time data, including data from Global Positioning System (GPS).
-Also, there are several free extensions available from ESRI:
-
-VPF Reader: Provides for reading Vector Product Format (VPF) data.
-Dialog Designer: Allows for creating and designing your own custom forms and dialogs with the ArcView GIS environment.
-MrSID Image Support: Supports multi-resolution wavelet-based image format.
-Database Access: Allows for accessing Spatial Database Engine (SDE) data.
-Military Data Reader Extensions: Allows for reading a variety of image data produced in the defense and intelligence communities.
-Database Themes: Supports SDE data.
-CAD Reader: Supports AutoCAD (DWG and DXF) and MicroStation (DGN) files.
-Digitizer: Supports digitizing and provides for directly entering your data using standard Windows WinTAB digitizer drivers.
-IMAGINE Reader: Supports reading and displaying ERDAS IMAGINE files.
-JPEG (JFIF) Image Support: Supports JPEG images for picture frames in layouts and for themes.
-GeoProcessing: Provides spatial analysis functions that include dissolve features, merge themes, clip, intersect, union, and spatial join.
-Crystal Reports:  External report writing program that runs under Windows.
-Graticules and Measured Grids: Provides for adding graticules and grids to layouts.
-Legend Tool: Provides for creating a customized graphical legend.
-TIFF Image Support: Supports reading TIFF images. 
+Several extensions are available for use with ArcView.  Many of these are commercial extensions developed by ESRI and others.
