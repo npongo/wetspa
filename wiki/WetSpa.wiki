@@ -1,7 +1,7 @@
 = WetSpa Extension, A GIS-based Hydrologic Model for Flood Prediction and Watershed Management =
 
 To download WetSpa model program see the links:
-http://www.vub.ac.be/WetSpa/
+http://www.vub.ac.be/WetSpa/  or  
 http://www.vub.ac.be/WetSpa/downloads.html
 
 == Introduction ==
