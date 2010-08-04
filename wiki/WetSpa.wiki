@@ -1,5 +1,9 @@
 = WetSpa Extension, A GIS-based Hydrologic Model for Flood Prediction and Watershed Management =
 
+To download WetSpa model program see the linke below:
+http://www.vub.ac.be/WetSpa/
+http://www.vub.ac.be/WetSpa/downloads.html
+
 == Introduction ==
 
 A GIS-based distributed watershed model, WetSpa Extension, has been under
